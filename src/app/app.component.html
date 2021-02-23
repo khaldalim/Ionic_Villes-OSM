@@ -25,6 +25,16 @@
           <ion-item *ngIf="!authService.isAutenticated()" routerLink="/register" lines="none">
             <ion-label>registration</ion-label>
           </ion-item>
+
+          <ion-item *ngIf="authService.isAutenticated()" routerLink="/dashboard" lines="none">
+            <ion-label>dashboard</ion-label>
+          </ion-item>
+
+          <ion-item *ngIf="authService.isAutenticated()" routerLink="/city-form"  lines="none">
+            <ion-label>rechercher une ville</ion-label>
+          </ion-item>
+
+
         </ion-list>
       </ion-content>
     </ion-menu>

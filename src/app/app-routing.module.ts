@@ -22,10 +22,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/members/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
-    path: 'list-produits',
+    path: 'city-info/:codePostal',
     canActivate : [AuthentificationGuard],
-    loadChildren: () => import('./pages/members/list-produits/list-produits.module').then( m => m.ListProduitsPageModule)
+    loadChildren: () => import('./pages/members/city-info/city-info.module').then( m => m.CityInfoPageModule)
   },
+  {
+    path: 'city-form',
+    canActivate : [AuthentificationGuard],
+    loadChildren: () => import('./pages/members/city-form/city-form.module').then( m => m.CityFormPageModule)
+  },
+
 
 
 ];

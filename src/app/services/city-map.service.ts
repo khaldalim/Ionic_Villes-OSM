@@ -1,17 +1,18 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
-import {Produit} from '../modeles/produit';
 import {Observable, throwError} from 'rxjs';
+import {City} from '../modeles/city';
 import {catchError, retry} from 'rxjs/operators';
-import {RepsonseProduit} from '../modeles/repsonse-produit';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProduitService {
+export class CityMapService {
 
+  constructor(private httpClient: HttpClient) {
+  }
 
-  private apiBaseUrl = 'https://reqres.in/api/products';
+  private apiBaseUrl = 'https://geo.api.gouv.fr/communes?codePostal=';
 
   // Http Options
   private httpOptions = {
@@ -20,20 +21,9 @@ export class ProduitService {
     })
   };
 
-  constructor(private httpClient: HttpClient) {
-  }
 
-  getAll(): Observable<RepsonseProduit>{
-    return this.httpClient.get<RepsonseProduit>(this.apiBaseUrl, this.httpOptions)
-      .pipe(
-        retry(2),
-        catchError(this.handleError)
-      );
-  }
-
-
-// Handle API errors
-  private handleError(error: HttpErrorResponse) {
+  // Handle API errors
+  private static handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
       console.error('An error occurred:', error.error.message);
@@ -49,4 +39,14 @@ export class ProduitService {
       'Something bad happened; please try again later.');
   }
 
+  getCityInfo(postalCode: number): Observable<City> {
+   // console.log(this.apiBaseUrl + postalCode + '&fields=code,nom,centre,region,departement,population,surface,codesPostaux&limit=1');
+    return this.httpClient.get<City>(
+      this.apiBaseUrl + postalCode + '&fields=code,nom,centre,region,departement,population,surface,codesPostaux&limit=1',
+      this.httpOptions)
+      .pipe(
+        retry(2),
+        catchError(CityMapService.handleError)
+      );
+  }
 }

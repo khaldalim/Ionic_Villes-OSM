@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>City</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-content>
+    <div id="mapId" style="width: 100%; height: 65%">
+    </div>
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <p>Nom : {{city.nom}}</p>
+              <p>Departement: {{city.departement}}</p>
+              <p>Region: {{city.region}}</p>
+              <p>population: {{city.population}}</p>
+              <p>Surface: {{ city.surface}}</p>
+              <p>Codes Postaux: </p>
+              <ul *ngFor="let code of city.codesPostaux">
+                <li>{{code}}</li>
+              </ul>
+
+
+            </div>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-content>
+
+
+</ion-content>

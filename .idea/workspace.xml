@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8001170-8869-42be-ba30-aeea376739dc" name="Default Changelist" comment="" />
+    <list default="true" id="f8001170-8869-42be-ba30-aeea376739dc" name="Default Changelist" comment="1st">
+      <change afterPath="$PROJECT_DIR$/src/app/modeles/city.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modeles/city.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-form/city-form.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-form/city-form.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-info/city-info-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-info/city-info.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-info/city-info.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-info/city-info.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-info/city-info.page.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-info/city-info.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/services/city-map.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modeles/produit.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modeles/produit.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modeles/repsonse-produit.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modeles/repsonse-produit.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/members/dashboard/dashboard.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/members/dashboard/dashboard.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/members/list-produits/list-produits-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/members/city-form/city-form-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/members/list-produits/list-produits.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/members/city-form/city-form.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/members/list-produits/list-produits.page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/members/list-produits/list-produits.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/members/city-form/city-form.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/members/list-produits/list-produits.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/members/city-form/city-form.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/members/list-produits/list-produits.page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/public/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/public/login/login.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/public/register/register.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/public/register/register.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/produit.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/city-map.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/produit.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,12 +48,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1osLbIu0ytOFm6QVPCNTXyNY7WD" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -28,6 +65,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="D:\developpement_m2i\ionic\tp-leo-villes\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -63,8 +101,23 @@
       <updated>1614070421816</updated>
       <workItem from="1614070422894" duration="249000" />
       <workItem from="1614070717766" duration="139000" />
-      <workItem from="1614070867126" duration="372000" />
+      <workItem from="1614070867126" duration="17833000" />
     </task>
+    <task id="LOCAL-00001" summary="1st">
+      <created>1614071375776</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614071375776</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1st">
+      <created>1614071393198</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614071393198</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,9 +136,12 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/tp-leo-villes" />
     </ignored-roots>
+    <MESSAGE value="1st" />
+    <option name="LAST_COMMIT_MESSAGE" value="1st" />
   </component>
 </project>
