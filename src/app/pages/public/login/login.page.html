@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+
+         </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <form (ngSubmit)="login()" #form="ngForm" >
+    <ion-item>
+      <ion-label position="floating">Username :</ion-label>
+      <ion-input type="text"  name="username" [(ngModel)]="user.email" placeholder="adresse@ionic.com" required></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Password : </ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="user.password" required></ion-input>
+    </ion-item>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" [disabled]="form.invalid" expand="block">Connexion</ion-button>
+        <p style="color: red; text-align: center" routerLink="/register">Pas de compte ?<br> enregistrez vous !</p>
+      </ion-col>
+    </ion-row>
+  </form>
+
+
+</ion-content>

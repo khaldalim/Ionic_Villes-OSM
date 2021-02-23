@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Produits</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-card *ngFor="let produit of listProduit">
+    <ion-card-content>
+      <ion-card-subtitle>N°{{produit.id}}</ion-card-subtitle>
+      <ion-card-title>{{produit.name}}</ion-card-title>
+            <ul>
+        <li>year : {{produit.year}}</li>
+        <li>color : {{produit.color}}</li>
+        <li>pantone_value : {{produit.pantoneValue}}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
