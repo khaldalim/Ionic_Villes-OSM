@@ -1,9 +1,5 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-
-    </ion-buttons>
     <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -14,22 +10,17 @@
 <ion-content [fullscreen]="true">
 
 
+<ion-item>
 
-  <ion-row>
-    <ion-item>
-      <ion-label>
-       Bonjour {{user.email}} !
-      </ion-label>
-    </ion-item>
-  </ion-row>
+  <h5> Bonjour {{user.email}}, et bienvenue sur l'application de recherche !</h5>
 
-  <ion-row>
+</ion-item>
 
-    <ion-item>
-      <ion-label>
-        <ion-button routerLink="/city-form">Rechercher une ville</ion-button>
-      </ion-label>
-    </ion-item>
-  </ion-row>
+
+<ion-item>
+  <ion-button style="margin: auto" routerLink="/city-form">Rechercher une ville</ion-button>
+
+</ion-item>
+
 
 </ion-content>

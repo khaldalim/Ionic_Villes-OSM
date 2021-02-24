@@ -1,5 +1,7 @@
 {
   "name": "ionic-coop",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -16,31 +16,21 @@
 
 
 
-  <form (ngSubmit)="RegisterForm()">
+  <form (ngSubmit)="RegisterForm()" #form="ngForm">
     <ion-item>
-      <ion-label position="floating">Username :</ion-label>
-      <ion-input type="text"  name="username" required></ion-input>
-    </ion-item>
-
-    <ion-item >
       <ion-label position="floating">Email : </ion-label>
-      <ion-input type="email"  name="email" required></ion-input>
+      <ion-input type="email" [(ngModel)]="user.email"  name="email" required></ion-input>
     </ion-item>
 
     <ion-item >
       <ion-label position="floating">Password : </ion-label>
-      <ion-input type="password" name="password" required></ion-input>
-    </ion-item>
-
-    <ion-item >
-      <ion-label position="floating">Password confirm : </ion-label>
-      <ion-input type="password" name="passwordConfirm" required></ion-input>
+      <ion-input type="password" [(ngModel)]="user.password" name="password" required></ion-input>
     </ion-item>
 
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Enregistrer</ion-button>
+        <ion-button type="submit" color="danger" [disabled]="form.invalid" expand="block">Enregistrer</ion-button>
       </ion-col>
     </ion-row>
   </form>

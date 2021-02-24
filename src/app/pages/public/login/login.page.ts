@@ -38,6 +38,7 @@ export class LoginPage implements OnInit {
       error => {
         console.log(error);
         this.presentAlert();
+        this.dismissLoading();
       }
     );
   }
@@ -58,8 +59,7 @@ export class LoginPage implements OnInit {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Erreur de connexion',
-      subHeader: 'Subtitle',
-      message: 'Message d\'erreur',
+     message: 'Veuillez entrer des identifiants correct.',
       buttons: ['OK']
     });
 
