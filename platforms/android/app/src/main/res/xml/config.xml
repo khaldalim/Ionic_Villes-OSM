@@ -29,9 +29,9 @@
     <feature name="CDVIonicKeyboard">
         <param name="android-package" onload="true" value="io.ionic.keyboard.CDVIonicKeyboard" />
     </feature>
-    <name>MyApp</name>
+    <name>Recherche de villes</name>
     <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework.com" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <author email="demetleo@hotmail.fr" href="http://ionicframework.com/">Léo DEMET</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

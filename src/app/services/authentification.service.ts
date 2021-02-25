@@ -70,9 +70,9 @@ export class AuthentificationService {
 
   createUser(user: User): any {
     try {
-      console.log(this.httpClient.post(this.apiBaseUrl + '/register', user, this.httpOptions).subscribe(data => {
+      this.httpClient.post(this.apiBaseUrl + '/register', user, this.httpOptions).subscribe(data => {
         console.log(data);
-      }));
+      });
     } catch (err) {
       console.log(err);
     }

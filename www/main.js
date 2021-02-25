@@ -159,7 +159,7 @@ AppComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\n  <ion-split-pane contentId=\"main-content\">\n    <ion-menu contentId=\"main-content\" type=\"overlay\">\n      <ion-content>\n        <ion-list id=\"inbox-list\">\n          <ion-list-header>Menu</ion-list-header>\n\n\n        </ion-list>\n\n        <ion-list id=\"labels-list\">\n          <!-- <ion-list-header>Labels</ion-list-header> -->\n\n\n\n\n          <ion-item *ngIf=\"!authService.isAutenticated()\" routerLink=\"/login\" lines=\"none\">\n            <ion-label>login</ion-label>\n          </ion-item>\n\n          <ion-item *ngIf=\"authService.isAutenticated()\" routerLink=\"\" (click)=\"logout()\" lines=\"none\">\n           <ion-label>logout</ion-label>\n          </ion-item>\n\n          <ion-item *ngIf=\"!authService.isAutenticated()\" routerLink=\"/register\" lines=\"none\">\n            <ion-label>registration</ion-label>\n          </ion-item>\n\n          <ion-item *ngIf=\"authService.isAutenticated()\" routerLink=\"/dashboard\" lines=\"none\">\n            <ion-label>dashboard</ion-label>\n          </ion-item>\n\n          <ion-item *ngIf=\"authService.isAutenticated()\" routerLink=\"/city-form\"  lines=\"none\">\n            <ion-label>rechercher une ville</ion-label>\n          </ion-item>\n\n\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n\n    <ion-router-outlet id=\"main-content\"></ion-router-outlet>\n\n  </ion-split-pane>\n</ion-app>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-app>\n  <ion-split-pane contentId=\"main-content\">\n    <ion-menu contentId=\"main-content\" type=\"overlay\">\n      <ion-content>\n        <ion-list id=\"inbox-list\">\n          <ion-list-header>Menu</ion-list-header>\n\n\n        </ion-list>\n\n        <ion-list id=\"labels-list\">\n          <!-- <ion-list-header>Labels</ion-list-header> -->\n\n\n          <ion-item *ngIf=\"!authService.isAutenticated()\" routerLink=\"/login\" lines=\"none\">\n            <ion-icon name=\"log-in\"></ion-icon>\n            &nbsp;\n            <ion-label>Login</ion-label>\n          </ion-item>\n\n          <ion-item *ngIf=\"authService.isAutenticated()\" routerLink=\"\" (click)=\"logout()\" lines=\"none\">\n            <ion-icon name=\"log-out\"></ion-icon>\n            &nbsp;\n            <ion-label>Logout</ion-label>\n          </ion-item>\n\n          <ion-item *ngIf=\"!authService.isAutenticated()\" routerLink=\"/register\" lines=\"none\">\n            <ion-icon name=\"add\"></ion-icon>\n            &nbsp;\n            <ion-label>Registration</ion-label>\n          </ion-item>\n\n          <ion-item *ngIf=\"authService.isAutenticated()\" routerLink=\"/dashboard\" lines=\"none\">\n            <ion-icon name=\"home\"></ion-icon>\n            &nbsp;\n            <ion-label>Dashboard</ion-label>\n          </ion-item>\n\n          <ion-item *ngIf=\"authService.isAutenticated()\" routerLink=\"/city-form\" lines=\"none\">\n            <ion-icon name=\"search\"></ion-icon>\n            &nbsp;\n            <ion-label>Rechercher une ville</ion-label>\n          </ion-item>\n\n          <ion-item *ngIf=\"authService.isAutenticated()\" routerLink=\"/city-historique\" lines=\"none\">\n            <ion-icon name=\"book\"></ion-icon>\n            &nbsp;\n            <ion-label>Historique</ion-label>\n          </ion-item>\n\n\n        </ion-list>\n      </ion-content>\n    </ion-menu>\n\n    <ion-router-outlet id=\"main-content\"></ion-router-outlet>\n\n  </ion-split-pane>\n</ion-app>\n");
 
 /***/ }),
 
@@ -282,6 +282,32 @@ let AuthentificationService = class AuthentificationService {
     }
     isAutenticated() {
         return this.authState.value;
+    }
+    createUser(user) {
+        try {
+            this.httpClient.post(this.apiBaseUrl + '/register', user, this.httpOptions).subscribe(data => {
+                console.log(data);
+            });
+        }
+        catch (err) {
+            console.log(err);
+        }
+        return this.httpClient.post(this.apiBaseUrl + '/register', user, this.httpOptions);
+    }
+    // Handle API errors
+    handleError(error) {
+        if (error.error instanceof ErrorEvent) {
+            // A client-side or network error occurred. Handle it accordingly.
+            console.error('An error occurred:', error.error.message);
+        }
+        else {
+            // The backend returned an unsuccessful response code.
+            // The response body may contain clues as to what went wrong,
+            console.error(`Backend returned code ${error.status}, ` +
+                `body was: ${error.error}`);
+        }
+        // return an observable with a user-facing error message
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])('Something bad happened; please try again later.');
     }
 };
 AuthentificationService.ctorParameters = () => [
@@ -567,7 +593,7 @@ const routes = [
     },
     {
         path: 'register',
-        loadChildren: () => __webpack_require__.e(/*! import() | pages-public-register-register-module */ "pages-public-register-register-module").then(__webpack_require__.bind(null, /*! ./pages/public/register/register.module */ "QnB3")).then(m => m.RegisterPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-public-register-register-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-public-register-register-module")]).then(__webpack_require__.bind(null, /*! ./pages/public/register/register.module */ "QnB3")).then(m => m.RegisterPageModule)
     },
     {
         path: 'dashboard',
@@ -583,6 +609,11 @@ const routes = [
         path: 'city-form',
         canActivate: [_guard_authentification_guard__WEBPACK_IMPORTED_MODULE_3__["AuthentificationGuard"]],
         loadChildren: () => __webpack_require__.e(/*! import() | pages-members-city-form-city-form-module */ "pages-members-city-form-city-form-module").then(__webpack_require__.bind(null, /*! ./pages/members/city-form/city-form.module */ "qiH8")).then(m => m.CityFormPageModule)
+    },
+    {
+        path: 'city-historique',
+        canActivate: [_guard_authentification_guard__WEBPACK_IMPORTED_MODULE_3__["AuthentificationGuard"]],
+        loadChildren: () => __webpack_require__.e(/*! import() | pages-members-city-historique-city-historique-module */ "pages-members-city-historique-city-historique-module").then(__webpack_require__.bind(null, /*! ./pages/members/city-historique/city-historique.module */ "OXRz")).then(m => m.CityHistoriquePageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {

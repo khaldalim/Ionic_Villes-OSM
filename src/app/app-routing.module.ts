@@ -31,6 +31,12 @@ const routes: Routes = [
     canActivate : [AuthentificationGuard],
     loadChildren: () => import('./pages/members/city-form/city-form.module').then( m => m.CityFormPageModule)
   },
+  {
+    path: 'city-historique',
+    canActivate : [AuthentificationGuard],
+    loadChildren: () => import('./pages/members/city-historique/city-historique.module').then( m => m.CityHistoriquePageModule)
+  },
+
 
 
 

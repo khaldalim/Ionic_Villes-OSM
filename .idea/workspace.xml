@@ -1,10 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8001170-8869-42be-ba30-aeea376739dc" name="Default Changelist" comment="v2 finish">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tp-leo-villes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tp-leo-villes.iml" afterDir="false" />
+    <list default="true" id="f8001170-8869-42be-ba30-aeea376739dc" name="Default Changelist" comment="gitignore">
+      <change afterPath="$PROJECT_DIR$/resources/ios/icon/icon-108@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-1792h~iphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-2688h~iphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-1792h~iphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-2688h~iphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-historique/city-historique-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-historique/city-historique.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-historique/city-historique.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-historique/city-historique.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-historique/city-historique.page.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/members/city-historique/city-historique.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/assets/icon/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/assets/icon/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-members-city-info-city-info-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-members-city-info-city-info-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-members-city-info-city-info-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-members-city-info-city-info-module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-members-dashboard-dashboard-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-members-dashboard-dashboard-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-members-dashboard-dashboard-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-members-dashboard-dashboard-module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-public-login-login-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-public-login-login-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-public-login-login-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-public-login-login-module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-public-register-register-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-public-register-register-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-public-register-register-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages-public-register-register-module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/vendor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/vendor.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-land-hdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-land-hdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-land-ldpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-land-ldpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-land-mdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-land-mdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-land-xhdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-land-xhdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-land-xxhdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-land-xxhdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-land-xxxhdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-land-xxxhdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-port-hdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-port-hdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-port-ldpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-port-ldpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-port-mdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-port-mdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-port-xhdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-port-xhdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-port-xxhdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-port-xxhdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-port-xxxhdpi/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/drawable-port-xxxhdpi/screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-ldpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-ldpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xhdpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xhdpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xxhdpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xxhdpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xxxhdpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xxxhdpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-1024.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-1024.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-20.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-20@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-20@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-20@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-20@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-24@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-24@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-27.5@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-27.5@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-29.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-29@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-29@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-29@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-29@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-40.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-40.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-40@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-40@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-40@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-40@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-44@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-44@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-50.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-50@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-50@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-60.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-60@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-60@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-72.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-72.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-72@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-72@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-76.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-76.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-76@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-76@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-83.5@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-83.5@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-86@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-86@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon-98@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-98@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/icon/icon@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/icon/icon@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-2436h.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-2436h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-568h@2x~iphone.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-568h@2x~iphone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-667h.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-667h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-736h.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-736h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-2436h.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-2436h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-736h.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-736h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@2x~ipad.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@2x~ipad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@~ipadpro.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@~ipadpro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape~ipad.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape~ipad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@2x~ipad.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@2x~ipad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@~ipadpro.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@~ipadpro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait~ipad.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait~ipad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default@2x~universal~anyany.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default@2x~universal~anyany.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ios/splash/Default~iphone.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ios/splash/Default~iphone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/splash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/members/city-info/city-info.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/members/city-info/city-info.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/members/city-info/city-info.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/members/city-info/city-info.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/members/dashboard/dashboard.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/members/dashboard/dashboard.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/public/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/public/login/login.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/public/register/register.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/public/register/register.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/authentification.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/authentification.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icon/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icon/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/assets/icon/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/www/assets/icon/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/main.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/pages-members-city-info-city-info-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-members-city-info-city-info-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/pages-members-city-info-city-info-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-members-city-info-city-info-module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/pages-members-dashboard-dashboard-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-members-dashboard-dashboard-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/pages-members-dashboard-dashboard-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-members-dashboard-dashboard-module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/pages-public-login-login-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-public-login-login-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/pages-public-login-login-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-public-login-login-module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/pages-public-register-register-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-public-register-register-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/pages-public-register-register-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages-public-register-register-module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/vendor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/vendor.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +212,8 @@
       <workItem from="1614173041462" duration="102000" />
       <workItem from="1614173176872" duration="232000" />
       <workItem from="1614173570328" duration="187000" />
-      <workItem from="1614173801550" duration="6779000" />
+      <workItem from="1614173801550" duration="6904000" />
+      <workItem from="1614241920786" duration="23783000" />
     </task>
     <task id="LOCAL-00001" summary="1st">
       <created>1614071375776</created>
@@ -125,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614180768526</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="gitignore">
+      <created>1614181025510</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614181025510</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +291,7 @@
     <MESSAGE value="1st" />
     <MESSAGE value="v1 finish" />
     <MESSAGE value="v2 finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2 finish" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
 </project>

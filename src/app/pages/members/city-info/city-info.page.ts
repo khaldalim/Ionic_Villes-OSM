@@ -21,12 +21,15 @@ export class CityInfoPage implements OnInit, OnDestroy {
   loading: any;
   road: string;
   iab: InAppBrowser;
+  CodePostaux: string;
+
 
   constructor(
     private cityMapService: CityMapService,
     private acR: ActivatedRoute,
     private loadController: LoadingController,
     public platform: Platform) {
+
   }
 
   ngOnInit() {
@@ -53,8 +56,7 @@ export class CityInfoPage implements OnInit, OnDestroy {
     return this.cityMapService.getCityInfo(this.acR.snapshot.params.codePostal).subscribe(
       (cityData: any) => {
         const loadCity = new City();
-        console.log(cityData);
-        if (cityData.length !== 0) {
+                if (cityData.length !== 0) {
           loadCity.nom = cityData[0].nom;
           loadCity.longitude = cityData[0].centre.coordinates[0];
           loadCity.latitude = cityData[0].centre.coordinates[1];
@@ -67,8 +69,18 @@ export class CityInfoPage implements OnInit, OnDestroy {
           loadCity.departement = cityData[0].departement.nom + ' - ' + cityData[0].departement.code;
           loadCity.region = cityData[0].region.nom;
 
+
           this.city = loadCity;
-          this.road = 'geo:' + this.city.latitude + ',' + this.city.longitude;
+
+
+          this.platform.ready().then(() => {
+            if (this.platform.is('android' || 'ios' || 'mobileweb')) {
+              this.road = 'geo:' + this.city.latitude + ',' + this.city.longitude;
+            } else {
+              this.road = 'https://www.google.com/maps/dir//' + this.city.latitude + ',' + this.city.longitude;
+            }
+          });
+
 
           this.map = Leaflet.map('mapId').setView([this.city.latitude, this.city.longitude], 10);
           Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -78,20 +90,62 @@ export class CityInfoPage implements OnInit, OnDestroy {
           Leaflet.marker([this.city.latitude, this.city.longitude]).addTo(this.map).bindPopup(
             '<h3>' + this.city.codesPostaux[0] + ' - ' + this.city.nom + '</h3>'
           );
-
         } else {
           this.map = Leaflet.map('mapId').setView([46.232192999999995, 2.209666999999996], 5);
           Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: 'edupala.com © Angular LeafLet',
           }).addTo(this.map);
         }
-        this.dismissLoading();
 
+        // enregistement en localhost
+        let existingEntries = JSON.parse(localStorage.getItem('allEntries'));
+        if (existingEntries == null) {
+          existingEntries = [];
+        }
+
+                if (this.city.codesPostaux === null) {
+          this.dismissLoading();
+          return false;
+        }
+        const entry = {
+
+          codeVille: this.city.codesPostaux[0],
+          nomVille: this.city.nom,
+          favoris: false
+        };
+        localStorage.setItem('entry', JSON.stringify(entry));
+        // Save allEntries back to local storage
+        existingEntries.push(entry);
+
+
+        // check if already in localstorage
+        if (localStorage.getItem('allEntries') !== null) {
+          if (this.checkIfisOnLocalStorage(this.city.codesPostaux[0])) {
+            console.log('exist');
+          } else {
+            console.log('not exist');
+            localStorage.setItem('allEntries', JSON.stringify(existingEntries));
+          }
+        } else {
+          console.log('not exist');
+          localStorage.setItem('allEntries', JSON.stringify(existingEntries));
+        }
+        this.dismissLoading();
       },
       (err) => {
         console.log(err);
       }
     );
+  }
+
+  checkIfisOnLocalStorage(code) {
+    const arrayHistory = JSON.parse(localStorage.getItem('allEntries'));
+    for (const ville of arrayHistory) {
+      if (ville.codeVille === code) {
+        return true;
+      }
+    }
+    return false;
   }
 
 
@@ -109,7 +163,6 @@ export class CityInfoPage implements OnInit, OnDestroy {
   }
 
   openInAppBrowser(url) {
-    console.log(url);
     this.iab.create(url, '_blank', {
       location: 'no'
     });

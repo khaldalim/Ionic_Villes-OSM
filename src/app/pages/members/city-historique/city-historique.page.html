@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Historique</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <!-- favoris -->
+  <ion-row *ngIf="arrayFav.length != 0">
+    <ion-list style="width: 100%" >
+      <h3 style="text-align: center">Favoris</h3>
+      <ion-item *ngFor="let ville of arrayFav">
+        <ion-item *ngIf="ville.favoris === true" style="width: 100%;">
+          <div style="width: 90%;cursor: pointer" routerLink="/city-info/{{ville.codeVille}}">
+            <p>{{ville.codeVille}} - {{ville.nomVille}}</p>
+          </div>
+          <div style="width: 10%;text-align: center">
+            <span style="cursor: pointer" (click)="favoris(ville)">
+            <ion-icon name="star"></ion-icon>
+          </span>
+          </div>
+        </ion-item>
+      </ion-item>
+    </ion-list>
+      </ion-row>
+
+
+  <!-- Autres -->
+  <ion-row *ngIf="arrayNotFav.length != 0">
+    <ion-list style="width: 100%">
+      <h3 style="text-align: center" *ngIf="arrayFav.length != 0">Autres</h3>
+      <ion-item *ngFor="let ville of arrayNotFav">
+        <ion-item *ngIf="ville.favoris === false" style="width: 100%;">
+          <div style="width: 90%;cursor: pointer" routerLink="/city-info/{{ville.codeVille}}">
+            <p>{{ville.codeVille}} - {{ville.nomVille}}</p>
+          </div>
+          <div style="width: 10%;text-align: center">
+          <span style="cursor: pointer" (click)="favoris(ville)">
+            <ion-icon name="star-outline"></ion-icon>
+          </span>
+          </div>
+        </ion-item>
+      </ion-item>
+    </ion-list>
+  </ion-row>
+
+</ion-content>

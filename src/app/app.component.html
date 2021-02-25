@@ -12,26 +12,40 @@
           <!-- <ion-list-header>Labels</ion-list-header> -->
 
 
-
-
           <ion-item *ngIf="!authService.isAutenticated()" routerLink="/login" lines="none">
-            <ion-icon name="log-in"></ion-icon>&nbsp;<ion-label>Login</ion-label>
+            <ion-icon name="log-in"></ion-icon>
+            &nbsp;
+            <ion-label>Login</ion-label>
           </ion-item>
 
           <ion-item *ngIf="authService.isAutenticated()" routerLink="" (click)="logout()" lines="none">
-            <ion-icon name="log-out"></ion-icon>&nbsp;<ion-label>Logout</ion-label>
+            <ion-icon name="log-out"></ion-icon>
+            &nbsp;
+            <ion-label>Logout</ion-label>
           </ion-item>
 
           <ion-item *ngIf="!authService.isAutenticated()" routerLink="/register" lines="none">
-            <ion-icon name="add"></ion-icon>&nbsp; <ion-label>Registration</ion-label>
+            <ion-icon name="add"></ion-icon>
+            &nbsp;
+            <ion-label>Registration</ion-label>
           </ion-item>
 
           <ion-item *ngIf="authService.isAutenticated()" routerLink="/dashboard" lines="none">
-            <ion-icon name="home"></ion-icon>&nbsp; <ion-label>Dashboard</ion-label>
+            <ion-icon name="home"></ion-icon>
+            &nbsp;
+            <ion-label>Dashboard</ion-label>
           </ion-item>
 
-          <ion-item *ngIf="authService.isAutenticated()" routerLink="/city-form"  lines="none">
-            <ion-icon name="search"></ion-icon>&nbsp;<ion-label>Rechercher une ville</ion-label>
+          <ion-item *ngIf="authService.isAutenticated()" routerLink="/city-form" lines="none">
+            <ion-icon name="search"></ion-icon>
+            &nbsp;
+            <ion-label>Rechercher une ville</ion-label>
+          </ion-item>
+
+          <ion-item *ngIf="authService.isAutenticated()" routerLink="/city-historique" lines="none">
+            <ion-icon name="book"></ion-icon>
+            &nbsp;
+            <ion-label>Historique</ion-label>
           </ion-item>
 
 

@@ -112,7 +112,7 @@ DashboardPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n\n    </ion-buttons>\n    <ion-buttons slot=\"end\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Dashboard</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content [fullscreen]=\"true\">\n\n\n\n  <ion-row>\n    <ion-item>\n      <ion-label>\n       Bonjour {{user.email}} !\n      </ion-label>\n    </ion-item>\n  </ion-row>\n\n\n    <ion-row class=\"ion-align-items-center\">\n\n\n        <ion-button routerLink=\"/city-form\">Rechercher une ville</ion-button>\n\n\n  </ion-row>\n\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\">\n  <ion-toolbar>\n    <ion-buttons slot=\"end\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Dashboard</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content [fullscreen]=\"true\">\n\n\n<ion-item>\n\n  <h5> Bonjour {{user.email}}, et bienvenue sur l'application de recherche !</h5>\n\n</ion-item>\n\n\n<ion-item>\n  <ion-button style=\"margin: auto\" color=\"success\" expand=\"block\" routerLink=\"/city-form\">Rechercher une ville</ion-button>\n</ion-item>\n  <ion-item>\n    <ion-button style=\"margin: auto; color: #fff\" color=\"success\" expand=\"block\" routerLink=\"/city-historique\">Historique des recherches</ion-button>\n  </ion-item>\n</ion-content>\n");
 
 /***/ }),
 

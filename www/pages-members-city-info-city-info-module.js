@@ -14145,7 +14145,6 @@ let CityInfoPage = class CityInfoPage {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             return this.cityMapService.getCityInfo(this.acR.snapshot.params.codePostal).subscribe((cityData) => {
                 const loadCity = new _modeles_city__WEBPACK_IMPORTED_MODULE_9__["City"]();
-                console.log(cityData);
                 if (cityData.length !== 0) {
                     loadCity.nom = cityData[0].nom;
                     loadCity.longitude = cityData[0].centre.coordinates[0];
@@ -14159,7 +14158,14 @@ let CityInfoPage = class CityInfoPage {
                     loadCity.departement = cityData[0].departement.nom + ' - ' + cityData[0].departement.code;
                     loadCity.region = cityData[0].region.nom;
                     this.city = loadCity;
-                    this.road = 'geo:' + this.city.latitude + ',' + this.city.longitude;
+                    this.platform.ready().then(() => {
+                        if (this.platform.is('android' || false || false)) {
+                            this.road = 'geo:' + this.city.latitude + ',' + this.city.longitude;
+                        }
+                        else {
+                            this.road = 'https://www.google.com/maps/dir//' + this.city.latitude + ',' + this.city.longitude;
+                        }
+                    });
                     this.map = leaflet__WEBPACK_IMPORTED_MODULE_4__["map"]('mapId').setView([this.city.latitude, this.city.longitude], 10);
                     leaflet__WEBPACK_IMPORTED_MODULE_4__["tileLayer"]('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                         attribution: 'edupala.com © Angular LeafLet',
@@ -14172,11 +14178,51 @@ let CityInfoPage = class CityInfoPage {
                         attribution: 'edupala.com © Angular LeafLet',
                     }).addTo(this.map);
                 }
+                // enregistement en localhost
+                let existingEntries = JSON.parse(localStorage.getItem('allEntries'));
+                if (existingEntries == null) {
+                    existingEntries = [];
+                }
+                if (this.city.codesPostaux === null) {
+                    this.dismissLoading();
+                    return false;
+                }
+                const entry = {
+                    codeVille: this.city.codesPostaux[0],
+                    nomVille: this.city.nom,
+                    favoris: false
+                };
+                localStorage.setItem('entry', JSON.stringify(entry));
+                // Save allEntries back to local storage
+                existingEntries.push(entry);
+                // check if already in localstorage
+                if (localStorage.getItem('allEntries') !== null) {
+                    if (this.checkIfisOnLocalStorage(this.city.codesPostaux[0])) {
+                        console.log('exist');
+                    }
+                    else {
+                        console.log('not exist');
+                        localStorage.setItem('allEntries', JSON.stringify(existingEntries));
+                    }
+                }
+                else {
+                    console.log('not exist');
+                    localStorage.setItem('allEntries', JSON.stringify(existingEntries));
+                }
                 this.dismissLoading();
             }, (err) => {
                 console.log(err);
             });
         });
+    }
+    checkIfisOnLocalStorage(code) {
+        const arrayHistory = JSON.parse(localStorage.getItem('allEntries'));
+        for (const ville of arrayHistory) {
+            if (ville.codeVille === code) {
+                return true;
+            }
+        }
+        return false;
     }
     /* loading */
     presentLoading() {
@@ -14194,7 +14240,6 @@ let CityInfoPage = class CityInfoPage {
         });
     }
     openInAppBrowser(url) {
-        console.log(url);
         this.iab.create(url, '_blank', {
             location: 'no'
         });
@@ -14497,7 +14542,7 @@ CityMapService = CityMapService_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["_
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n\n    </ion-buttons>\n    <ion-buttons slot=\"end\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>City</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content [fullscreen]=\"true\">\n\n\n  <div id=\"mapId\" style=\"width: 100%; height: 65%\">\n  </div>\n  <div>\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n          <div *ngIf=\"city.nom !== null\">\n            <p>Nom : {{city.nom}}</p>\n            <p>Departement: {{city.departement}}</p>\n            <p>Region: {{city.region}}</p>\n            <p>population: {{city.population}} personnes</p>\n            <p>Surface: {{ city.surface}} km²</p>\n            <p>Codes Postaux: </p>\n            <ul *ngFor=\"let code of city.codesPostaux\">\n              <li>{{code}}</li>\n\n            </ul>\n            <ion-button color=\"success\" (click)=\"openInAppBrowser(road)\">Itinéraire</ion-button>\n\n\n          </div>\n          <div *ngIf=\"city.nom === null\">\n            <p style=\"text-align: center\">Pas de resulats</p>\n\n          </div>\n        </ion-col>\n\n      </ion-row>\n    </ion-grid>\n  </div>\n\n\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n\n    </ion-buttons>\n    <ion-buttons slot=\"end\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>City</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content [fullscreen]=\"true\">\n\n\n  <div id=\"mapId\" style=\"width: 100%; height: 65%\">\n  </div>\n  <div>\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n          <div *ngIf=\"city.nom !== null\">\n            <p>Nom : {{city.nom}}</p>\n            <p>Departement: {{city.departement}}</p>\n            <p>Region: {{city.region}}</p>\n            <p>population: {{city.population}} personnes</p>\n            <p>Surface: {{ city.surface}} km²</p>\n            <p>Codes Postaux: </p>\n            <ul *ngFor=\"let code of city.codesPostaux\">\n              <li>{{code}}</li>\n\n            </ul>\n            <div style=\"text-align: center\">\n            <ion-button color=\"success\" (click)=\"openInAppBrowser(road)\">Itinéraire</ion-button>\n          </div>\n\n          </div>\n          <div *ngIf=\"city.nom === null\">\n            <p style=\"text-align: center\">Pas de resulats</p>\n\n          </div>\n        </ion-col>\n\n      </ion-row>\n    </ion-grid>\n  </div>\n\n\n</ion-content>\n");
 
 /***/ }),
 

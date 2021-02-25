@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n\n    </ion-buttons>\n    <ion-buttons slot=\"end\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Register</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content [fullscreen]=\"true\">\n\n\n\n\n  <form (ngSubmit)=\"RegisterForm()\">\n    <ion-item>\n      <ion-label position=\"floating\">Username :</ion-label>\n      <ion-input type=\"text\"  name=\"username\" required></ion-input>\n    </ion-item>\n\n    <ion-item >\n      <ion-label position=\"floating\">Email : </ion-label>\n      <ion-input type=\"email\"  name=\"email\" required></ion-input>\n    </ion-item>\n\n    <ion-item >\n      <ion-label position=\"floating\">Password : </ion-label>\n      <ion-input type=\"password\" name=\"password\" required></ion-input>\n    </ion-item>\n\n    <ion-item >\n      <ion-label position=\"floating\">Password confirm : </ion-label>\n      <ion-input type=\"password\" name=\"passwordConfirm\" required></ion-input>\n    </ion-item>\n\n\n    <ion-row>\n      <ion-col>\n        <ion-button type=\"submit\" color=\"danger\" expand=\"block\">Enregistrer</ion-button>\n      </ion-col>\n    </ion-row>\n  </form>\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header [translucent]=\"true\">\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n\n    </ion-buttons>\n    <ion-buttons slot=\"end\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n    <ion-title>Register</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content [fullscreen]=\"true\">\n\n\n\n\n  <form (ngSubmit)=\"RegisterForm()\" #form=\"ngForm\">\n    <ion-item>\n      <ion-label position=\"floating\">Email : </ion-label>\n      <ion-input type=\"email\" [(ngModel)]=\"user.email\"  name=\"email\" required></ion-input>\n    </ion-item>\n\n    <ion-item >\n      <ion-label position=\"floating\">Password : </ion-label>\n      <ion-input type=\"password\" [(ngModel)]=\"user.password\" name=\"password\" required></ion-input>\n    </ion-item>\n\n\n    <ion-row>\n      <ion-col>\n        <ion-button type=\"submit\" color=\"danger\" [disabled]=\"form.invalid\" expand=\"block\">Enregistrer</ion-button>\n      </ion-col>\n    </ion-row>\n  </form>\n\n  <ion-row>\n    <ion-col style=\"text-align: center\">\n      <h4>Pour un enregistrement valide sur l'api :</h4>\n      <p>email : eve.holt@reqres.in</p>\n      <p>password : pistol</p>\n    </ion-col>\n  </ion-row>\n</ion-content>\n");
 
 /***/ }),
 
@@ -27,18 +27,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_register_page_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./register.page.html */ "DkPD");
 /* harmony import */ var _register_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./register.page.scss */ "WaM3");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _modeles_user__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../modeles/user */ "xGwo");
+/* harmony import */ var _services_authentification_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/authentification.service */ "izgN");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic/angular */ "TEn/");
+
+
+
+
 
 
 
 
 let RegisterPage = class RegisterPage {
-    constructor() { }
+    constructor(authService, router, loadController) {
+        this.authService = authService;
+        this.router = router;
+        this.loadController = loadController;
+    }
     ngOnInit() {
+        this.user = new _modeles_user__WEBPACK_IMPORTED_MODULE_4__["User"]();
+        this.loading = this.loadController;
     }
     RegisterForm() {
+        console.log('register');
+        this.authService.createUser(this.user);
+        this.router.navigate(['/login']);
     }
 };
-RegisterPage.ctorParameters = () => [];
+RegisterPage.ctorParameters = () => [
+    { type: _services_authentification_service__WEBPACK_IMPORTED_MODULE_5__["AuthentificationService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["LoadingController"] }
+];
 RegisterPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-register',
