@@ -14,12 +14,13 @@ Dans le terminal taper ["npm install"] dans le dossier du projet pour générer 
 
 
 Sur Android :
-installer sur votre mobile l'apk nommé ["finish-apk.apk"] qui est à la racine du projet.
+
+Installer sur votre mobile l'apk nommé ["finish-apk.apk"] qui est à la racine du projet.
 
 
 ## Démarrage
 
-pour démarer le projet depuis un ordianteur taper dans le terminal["ionic serve -l"] à l'intérieur du dossier du projet.
+Pour démarer le projet depuis un ordianteur taper dans le terminal["ionic serve -l"] à l'intérieur du dossier du projet.
 
 
 ## Fabriqué avec
