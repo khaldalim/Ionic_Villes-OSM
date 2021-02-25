@@ -10,17 +10,17 @@ Les villes recherché sont stockées dans un local storage qui permet de les voi
 Sur ordinateur:
 
 Après avoir récupérer les fichier du git:
-Dans le terminal taper ["npm install"] dans le dossier du projet pour générer le dossier "node_modules".
+Dans le terminal taper "npm install" dans le dossier du projet pour générer le dossier "node_modules".
 
 
 Sur Android :
 
-Installer sur votre mobile l'apk nommé ["finish-apk.apk"] qui est à la racine du projet.
+Installer sur votre mobile l'apk nommé "finish-apk.apk" qui est à la racine du projet.
 
 
 ## Démarrage
 
-Pour démarer le projet depuis un ordianteur taper dans le terminal["ionic serve -l"] à l'intérieur du dossier du projet.
+Pour démarer le projet depuis un ordianteur taper dans le terminal "ionic serve -l" à l'intérieur du dossier du projet.
 
 
 ## Fabriqué avec
