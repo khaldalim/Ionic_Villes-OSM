@@ -56,7 +56,7 @@ export class CityInfoPage implements OnInit, OnDestroy {
     return this.cityMapService.getCityInfo(this.acR.snapshot.params.codePostal).subscribe(
       (cityData: any) => {
         const loadCity = new City();
-                if (cityData.length !== 0) {
+        if (cityData.length !== 0) {
           loadCity.nom = cityData[0].nom;
           loadCity.longitude = cityData[0].centre.coordinates[0];
           loadCity.latitude = cityData[0].centre.coordinates[1];
@@ -69,9 +69,7 @@ export class CityInfoPage implements OnInit, OnDestroy {
           loadCity.departement = cityData[0].departement.nom + ' - ' + cityData[0].departement.code;
           loadCity.region = cityData[0].region.nom;
 
-
           this.city = loadCity;
-
 
           this.platform.ready().then(() => {
             if (this.platform.is('android' || 'ios' || 'mobileweb')) {
@@ -103,7 +101,7 @@ export class CityInfoPage implements OnInit, OnDestroy {
           existingEntries = [];
         }
 
-                if (this.city.codesPostaux === null) {
+        if (this.city.codesPostaux === null) {
           this.dismissLoading();
           return false;
         }
