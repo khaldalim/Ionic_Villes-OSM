@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {stringify} from 'querystring';
-import {City} from '../../../modeles/city';
 
 @Component({
   selector: 'app-city-historique',
@@ -9,9 +7,9 @@ import {City} from '../../../modeles/city';
 })
 export class CityHistoriquePage implements OnInit {
 
-  arrayHistory: [];
-  arrayFav: [][];
-  arrayNotFav: [][];
+  arrayHistory;
+  arrayFav;
+  arrayNotFav;
 
   constructor() {
 

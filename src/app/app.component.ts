@@ -4,7 +4,6 @@ import {AuthentificationService} from './services/authentification.service';
 import {Router} from '@angular/router';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
-import {User} from './modeles/user';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +16,7 @@ export class AppComponent {
 
 
   constructor(private platform: Platform,
-              private authService: AuthentificationService,
+              public authService: AuthentificationService,
               private router: Router,
               private splashScreen: SplashScreen,
               private statusBar: StatusBar) {

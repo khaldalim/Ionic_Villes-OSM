@@ -23,6 +23,7 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.user = new User();
+    this.loading = this.loadController;
 
   }
 

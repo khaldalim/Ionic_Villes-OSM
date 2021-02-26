@@ -140,6 +140,7 @@ let LoginPage = class LoginPage {
     }
     ngOnInit() {
         this.user = new _modeles_user__WEBPACK_IMPORTED_MODULE_4__["User"]();
+        this.loading = this.loadController;
     }
     login() {
         this.presentLoading();
